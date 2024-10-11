@@ -1,0 +1,38 @@
+{
+  "name": "website_sm",
+  "version": "1.0.0",
+  "description": "Website boiler small business",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CustomCraft-Software-LLC/Website_SM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CustomCraft-Software-LLC/Website_SM/issues"
+  },
+  "homepage": "https://github.com/CustomCraft-Software-LLC/Website_SM#readme",
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-eslint": "^4.0.4",
+    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-gtag": "^1.0.13",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-offline": "^6.13.3",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-robots-txt": "^1.8.0",
+    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

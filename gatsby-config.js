@@ -46,31 +46,45 @@ module.exports = {
         },
       },
       {
-        resolve: "gatsby-plugin-schema-snapshot", // Optional: For better structured data
-        options: {
-          // Add structured data options if needed
-        },
-      },
-      "gatsby-plugin-sass", // If you want to use Sass for styling
-      {
-        resolve: "gatsby-plugin-image", // For optimized images
-        options: {
-          // Add options if needed
-        },
+        resolve: "gatsby-plugin-image",
+        options: {},
       },
       "gatsby-plugin-sharp",
       "gatsby-transformer-sharp",
       {
-        resolve: "gatsby-plugin-google-analytics", // Optional: For tracking
+        resolve: "gatsby-plugin-google-analytics",
         options: {
           trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID", // Replace with your tracking ID
         },
       },
       {
-        resolve: "gatsby-plugin-gtag", // Optional: For Google Analytics
+        resolve: "gatsby-plugin-gtag",
         options: {
           trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID", // Replace with your tracking ID
-          head: true, // Include script in the head
+          head: true,
+        },
+      },
+      {
+        resolve: "gatsby-plugin-offline",
+        options: {},
+      },
+      {
+        resolve: "gatsby-plugin-manifest",
+        options: {
+          name: "Your Business Name",
+          short_name: "Business",
+          start_url: "/",
+          background_color: "#ffffff",
+          display: "standalone",
+          icon: "src/images/icon.png", // Path to your favicon
+        },
+      },
+      {
+        resolve: "gatsby-plugin-eslint",
+        options: {
+          test: /\.(js|jsx|ts|tsx)$/, // Apply ESLint to these file types
+          exclude: /(node_module)/,
+          stages: ["develop", "build"],
         },
       },
     ],

@@ -4,7 +4,13 @@
   "description": "Website boiler small business",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "develop": "gatsby develop",          
+    "build": "gatsby build",             
+    "serve": "gatsby serve",             
+    "format": "prettier --write .",      
+    "lint": "eslint .",                  
+    "clean": "gatsby clean",             
+    "test": "jest"                        
   },
   "repository": {
     "type": "git",

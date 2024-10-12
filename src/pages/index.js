@@ -1,27 +1,15 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import "../styles/styles.scss";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
-const IndexPage = () => (
-  <div>
-    <Helmet>
-      <title>Your Business Name</title>
-      <meta name="description" content="A brief description of your small business." />
-    </Helmet>
-    <header>
-      <h1>Welcome to Your Business Name!</h1>
-      <p>Your business tagline or introduction goes here.</p>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-
+const Index = () => (
+  <Layout>
+    <SEO 
+      title="Home" 
+      description="Welcome to Your Business Name. We provide top-notch services to our clients."
+      url="https://yourdomain.com/"
+      key="home, business, services, your business name"
+    />
     <section>
       <h2>Our Services</h2>
       <ul>
@@ -36,11 +24,7 @@ const IndexPage = () => (
         </li>
       </ul>
     </section>
-
-    <footer>
-      <p>Contact us: <a href="/contact">Get in touch</a></p>
-    </footer>
-  </div>
+  </Layout>
 );
 
-export default IndexPage;
+export default Index;

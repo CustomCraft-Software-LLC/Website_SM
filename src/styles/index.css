@@ -1,0 +1,31 @@
+.index-section {
+    padding: 20px;
+}
+
+.index-heading {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.index-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.index-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.index-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.index-strong {
+    color: #3498db;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
+import "../styles/index.css"; 
 
 const Index = () => (
   <Layout>
@@ -10,17 +11,17 @@ const Index = () => (
       url="https://yourdomain.com/"
       key="home, business, services, your business name"
     />
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>
-          <strong>Service 1</strong>: A brief description of Service 1.
+    <section className="index-section">
+      <h2 className="index-heading">Our Services</h2>
+      <ul className="index-list">
+        <li className="index-item">
+          <strong className="index-strong">Service 1</strong>: A brief description of Service 1.
         </li>
-        <li>
-          <strong>Service 2</strong>: A brief description of Service 2.
+        <li className="index-item">
+          <strong className="index-strong">Service 2</strong>: A brief description of Service 2.
         </li>
-        <li>
-          <strong>Service 3</strong>: A brief description of Service 3.
+        <li className="index-item">
+          <strong className="index-strong">Service 3</strong>: A brief description of Service 3.
         </li>
       </ul>
     </section>

@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "../components/SEO";
 import Layout from "../components/Layout";
+import "../styles/license.css";
 
 const License = ({ pageContext }) => {
   const { licenseContent } = pageContext; 
@@ -14,12 +15,12 @@ const License = ({ pageContext }) => {
         key="license, terms, conditions, your business name"
       />
       
-      <section>
-        <h1>License Information</h1>
+      <section className="license-section">
+        <h1 className="license-title">License Information</h1>
         {licenseContent ? (
-          <pre>{licenseContent}</pre>  
+          <pre className="license-content">{licenseContent}</pre>  
         ) : (
-          <p>Unable to load the license at this time.</p> 
+          <p className="license-error">Unable to load the license at this time.</p> 
         )}
       </section>
     </Layout>

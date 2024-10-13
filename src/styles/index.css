@@ -14,7 +14,7 @@
 }
 
 .index-item {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
@@ -27,5 +27,5 @@
 }
 
 .index-strong {
-    color: #3498db;
+    color: #003;
 }

@@ -12,22 +12,40 @@ const Services = () => (
       key="services, offerings, your business name"
     />
     
-    <section>
-      <h1>Our Services</h1>
-      <p>At Your Business Name, we offer a variety of services to help you achieve your goals. Our experienced team is dedicated to providing high-quality solutions tailored to your needs.</p>
+    <section className="services-section">
+      <h1 className="services-title">Our Services</h1>
+      <p className="services-intro">
+        At Your Business Name, we offer a variety of services to help you achieve your goals.
+        Our experienced team is dedicated to providing high-quality solutions tailored to your needs.
+      </p>
+
+      <div className="service">
+        <h2 className="service-title">Service 1</h2>
+        <p className="service-description">
+          A brief description of Service 1. Explain what it entails and how it benefits customers.
+        </p>
+      </div>
       
-      <h2>Service 1</h2>
-      <p>A brief description of Service 1. Explain what it entails and how it benefits customers.</p>
+      <div className="service">
+        <h2 className="service-title">Service 2</h2>
+        <p className="service-description">
+          A brief description of Service 2. Highlight unique features and advantages.
+        </p>
+      </div>
       
-      <h2>Service 2</h2>
-      <p>A brief description of Service 2. Highlight unique features and advantages.</p>
+      <div className="service">
+        <h2 className="service-title">Service 3</h2>
+        <p className="service-description">
+          A brief description of Service 3. Describe how it stands out in the market.
+        </p>
+      </div>
       
-      <h2>Service 3</h2>
-      <p>A brief description of Service 3. Describe how it stands out in the market.</p>
-      
-      <h2>Service 4</h2>
-      <p>A brief description of Service 4. Focus on its importance and impact.</p>
-      
+      <div className="service">
+        <h2 className="service-title">Service 4</h2>
+        <p className="service-description">
+          A brief description of Service 4. Focus on its importance and impact.
+        </p>
+      </div>
     </section>
   </Layout>
 );

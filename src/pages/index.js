@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
-import CallToAction from "../components/CallToAction";
+import Cta from "../components/Cta";
 import "../styles/index.css";
 
 const Index = () => (
@@ -16,7 +16,7 @@ const Index = () => (
     />
     <Hero />
     <Services />
-    <CallToAction />
+    <Cta />
   </Layout>
 );
 

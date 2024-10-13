@@ -1,16 +1,17 @@
 .cta-section {
     padding: 2rem 1rem;
     text-align: center;
-    background-color: #003;
-    color: white;
+    color: #003;
 }
   
 .cta-heading {
     margin-bottom: 1rem;
+    color: #003;
 }
   
 .cta-description {
     margin-bottom: 1.5rem;
+    color: #003;
 }
   
 .btn-secondary {

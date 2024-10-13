@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
+import '../styles/contactForm.css';
 
 const ContactForm = () => {
     const [data, setData] = useState({ name: "", email: "", message: "" });
 
     const handleChange = (e) => { 
-        setData({...data, [e.target.name]: e.target.value});
+        setData({ ...data, [e.target.name]: e.target.value });
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(data);
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
+            <h2>Contact Us</h2>
             <label>
                 Name:
                 <input 

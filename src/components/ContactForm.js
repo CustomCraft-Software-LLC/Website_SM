@@ -15,7 +15,6 @@ const ContactForm = () => {
 
     return (
         <form className="contact-form" onSubmit={handleSubmit}>
-            <h2>Contact Us</h2>
             <label>
                 Name:
                 <input 
@@ -43,7 +42,8 @@ const ContactForm = () => {
                 <textarea 
                     name="message" 
                     value={data.message} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    maxLength={500} 
                     required 
                 />
             </label>

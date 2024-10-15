@@ -1,40 +1,32 @@
 .about-section {
-    padding: 50px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    margin: 0 auto;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  background-color: #ffffff;
 }
-  
-.about-title {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+
+.about-title, .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
 }
-  
-.about-text {
-    font-size: 1.125rem;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
+
+.about-overview, .mission-text, .values-list, .team-text, .history-text, .testimonial {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
-  
-.about-text:last-of-type {
-    margin-bottom: 0;
+
+.team-gallery {
+  display: flex;
+  gap: 20px;
 }
-  
-@media (max-width: 768px) {
-    .about-section {
-      padding: 30px;
-    }
-  
-    .about-title {
-      font-size: 2rem;
-    }
-  
-    .about-text {
-      font-size: 1rem;
-    }
+
+.team-member {
+  text-align: center;
+}
+
+.team-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }

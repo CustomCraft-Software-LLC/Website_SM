@@ -1,61 +1,84 @@
 .pricing-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-}
+  }
   
-.pricing-title {
+  .pricing-title {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
     color: #333;
-}
+    margin-bottom: 20px;
+  }
   
-.pricing-intro {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+  .pricing-intro {
+    font-size: 1.2rem;
     color: #666;
-}
+    margin-bottom: 40px;
+  }
   
-.pricing-plans {
+  /* Pricing Plans */
+  .pricing-plans {
     display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-}
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
   
-.pricing-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem;
-    width: 300px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+  .pricing-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
   
-.plan-title {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: #003;
-}
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
   
-.plan-price {
-    font-size: 1.5rem;
+  .plan-title {
+    font-size: 1.8rem;
     color: #333;
-    margin-bottom: 1rem;
-}
+    margin-bottom: 15px;
+  }
   
-.plan-description {
-    margin-bottom: 1rem;
-    color: #555;
-}
+  .plan-price {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
   
-.plan-features {
-    list-style-type: none;
+  .plan-description {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .plan-features {
+    list-style: none;
     padding: 0;
-    margin: 0;
-}
+  }
   
-.plan-features li {
-    margin-bottom: 0.5rem;
-    color: #444;
-}
+  .plan-features li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .pricing-plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .pricing-card {
+      width: 90%;
+      max-width: none;
+      margin-bottom: 30px;
+    }
+  }

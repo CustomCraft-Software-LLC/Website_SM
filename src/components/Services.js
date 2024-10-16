@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/services.css";
-import { FaCode, FaBullhorn, FaLaptop } from "react-icons/fa"; // Optional: Example icons
+import { FaCode, FaBullhorn, FaLaptop } from "react-icons/fa"; 
 
 const servicesData = [
   {

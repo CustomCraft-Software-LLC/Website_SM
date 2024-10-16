@@ -1,77 +1,99 @@
 .about-section {
-  padding: 40px;
+  padding: 60px 20px;
   background-color: #ffffff;
+  text-align: center; /* Center-align all text */
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the container */
   padding: 0 20px;
 }
 
 .about-title {
   font-size: 2.5rem;
-  margin-bottom: 20px;
   color: #333;
+  margin-bottom: 20px;
 }
 
-.about-overview, .mission-text, .values-list, .team-text, .history-text, .testimonial {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-}
-
+/* Section Styling */
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 15px;
-  color: #222;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center title */
 }
 
+.about-overview, .mission-text, .history-text, .team-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: center; /* Center text */
+}
+
+/* Core Values List */
 .values-list {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  text-align: center; /* Center-align list */
+  margin: 0 auto;
 }
 
 .values-list li {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
 }
 
+/* Team Section */
 .team-gallery {
   display: flex;
-  gap: 20px;
+  justify-content: center; /* Center the team members */
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .team-member {
-  text-align: center;
-  max-width: 200px;
+  text-align: center; /* Center-align text inside the team member */
 }
 
 .team-photo {
-  border-radius: 50%;
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
-.testimonial {
+.team-member p {
   font-size: 1.1rem;
-  font-style: italic;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
+  color: #333;
 }
 
-.testimonial cite {
+/* Testimonial */
+.testimonial {
+  font-size: 1.3rem;
+  color: #666;
+  font-style: italic;
+  text-align: center; /* Center the testimonial */
+}
+
+cite {
   display: block;
   margin-top: 10px;
   font-size: 1rem;
-  font-weight: bold;
-  text-align: right;
+  color: #999;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .team-gallery {
+    flex-direction: column; /* Stack team members on small screens */
+    align-items: center;
+  }
 }

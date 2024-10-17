@@ -43,12 +43,13 @@ const ContactForm = () => {
                     name="message" 
                     value={data.message} 
                     onChange={handleChange}
-                    maxLength={500} 
+                    maxLength={1000} 
                     required 
+                    rows={6}
                 />
             </label>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className="submit-button">Submit</button>
         </form>
     );
 }

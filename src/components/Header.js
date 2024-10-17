@@ -4,7 +4,7 @@ import "../styles/layout.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavLinks = ({ onLinkClick }) => (
-  <ul>
+  <ul className="nav-links">
     <li><Link to="/" onClick={onLinkClick}>Home</Link></li>
     <li><Link to="/about" onClick={onLinkClick}>About</Link></li>
     <li><Link to="/pricing" onClick={onLinkClick}>Pricing</Link></li>
@@ -27,9 +27,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/" className="logo">
-          Your Business Name
-        </Link>
+        <Link to="/" className="logo">Your Business Name</Link>
         <nav className={isMobile ? "nav-links-mobile" : "nav-links"}>
           <NavLinks onLinkClick={closeMenuOnLinkClick} />
         </nav>
@@ -46,3 +44,4 @@ const Header = () => {
 };
 
 export default Header;
+

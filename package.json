@@ -25,7 +25,6 @@
   "homepage": "https://github.com/CustomCraft-Software-LLC/Website_SM#readme",
   "dependencies": {
     "gatsby": "^5.13.7",
-    "gatsby-plugin-eslint": "^4.0.4",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^3.13.1",
@@ -44,7 +43,7 @@
     "react-icons": "^5.3.0"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.32.0"
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-webpack-plugin": "^4.2.0"
   }
 }

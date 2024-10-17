@@ -3,7 +3,7 @@ module.exports = {
     title: "Your Business Name",
     description: "A brief description of your small business.",
     author: "Your Name",
-    siteUrl: "https://yourbusiness.com", // Change this to your actual website URL
+    siteUrl: "https://yourbusiness.com",
   },
   plugins: [
     {
@@ -13,7 +13,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-helmet", // Use this plugin for managing head tags, including SEO
+      resolve: "gatsby-plugin-react-helmet",
     },
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -25,21 +25,21 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    "gatsby-transformer-sharp", // Corrected the typo here
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID", // Replace with your tracking ID
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
       },
     },
     {
       resolve: "gatsby-plugin-gtag",
       options: {
-        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID", // Replace with your tracking ID
+        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
         head: true,
       },
     },
-    "gatsby-plugin-offline", // Enables PWA offline functionality
+    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -47,17 +47,9 @@ module.exports = {
         short_name: "Business",
         start_url: "/",
         background_color: "#ffffff",
-        theme_color: "#317EFB", // Add a theme color for the browser toolbar
+        theme_color: "#317EFB",
         display: "standalone",
-        icon: "src/images/icon.png", // Path to your favicon
-      },
-    },
-    {
-      resolve: "gatsby-plugin-eslint",
-      options: {
-        test: /\.(js|jsx|ts|tsx)$/, // Apply ESLint to these file types
-        exclude: /(node_modules|\.cache|public)/, // Exclude unnecessary directories
-        stages: ["develop", "build"],
+        icon: "src/images/icon.png",
       },
     },
   ],

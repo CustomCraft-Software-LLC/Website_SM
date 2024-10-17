@@ -3,7 +3,6 @@ import SEO from "../components/SEO";
 import Layout from "../components/Layout";
 import "../styles/about.css";
 
-// Reusable Section Component
 const Section = ({ title, children }) => (
   <section className="section">
     <h2 className="section-title">{title}</h2>
@@ -11,7 +10,6 @@ const Section = ({ title, children }) => (
   </section>
 );
 
-// Reusable Team Member Component
 const TeamMember = ({ name, position, imageSrc }) => (
   <div className="team-member">
     <img src={imageSrc} alt={name} className="team-photo" />
@@ -32,14 +30,12 @@ const About = () => (
       <div className="container">
         <h1 className="about-title">About Us</h1>
 
-        {/* Company Overview */}
         <p className="about-overview">
           Welcome to [Your Business Name]! We have been delivering excellence since [Year Established]. 
           Our passion for [Industry or Service] drives us to constantly innovate and provide the best 
           solutions to our customers. Discover our journey, our values, and the team behind our success.
         </p>
 
-        {/* Mission Section */}
         <Section title="Our Mission">
           <p className="mission-text">
             Our mission is to [insert mission statement]. We believe in [highlight core value or philosophy]. 
@@ -48,7 +44,6 @@ const About = () => (
           </p>
         </Section>
 
-        {/* Core Values Section */}
         <Section title="Our Values">
           <ul className="values-list">
             <li><strong>Integrity:</strong> We uphold the highest standards of integrity in all of our actions.</li>
@@ -58,7 +53,6 @@ const About = () => (
           </ul>
         </Section>
 
-        {/* Team Section */}
         <Section title="Meet Our Team">
           <p className="team-text">
             Our team is the backbone of [Your Business Name]. Each of our talented members brings unique skills 
@@ -67,13 +61,11 @@ const About = () => (
           </p>
 
           <div className="team-gallery">
-            <TeamMember name="John Doe" position="CEO" imageSrc="path-to-team-member1.jpg" />
-            <TeamMember name="Jane Smith" position="CTO" imageSrc="path-to-team-member2.jpg" />
-            {/* Add more team members as needed */}
+            <TeamMember name="John Doe" position="CEO" imageSrc="../images/icon.jpg" />
+            <TeamMember name="Jane Smith" position="CTO" imageSrc="../images/icon.jpg" />
           </div>
         </Section>
 
-        {/* History Section */}
         <Section title="Our History">
           <p className="history-text">
             Founded in [Year], [Your Business Name] began with a simple vision: [Insert vision or early history]. 
@@ -81,7 +73,6 @@ const About = () => (
           </p>
         </Section>
 
-        {/* Testimonials Section */}
         <Section title="What Our Clients Say">
           <blockquote className="testimonial">
             "The team at [Your Business Name] has exceeded our expectations. Their dedication and innovation 

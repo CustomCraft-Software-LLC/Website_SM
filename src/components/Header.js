@@ -8,8 +8,8 @@ const NavLinks = ({ onLinkClick }) => (
     <li><Link to="/" onClick={onLinkClick}>Home</Link></li>
     <li><Link to="/about" onClick={onLinkClick}>About</Link></li>
     <li><Link to="/pricing" onClick={onLinkClick}>Pricing</Link></li>
+    <li><Link to="/faq" onClick={onLinkClick}>Faq</Link></li>
     <li><Link to="/contact" onClick={onLinkClick}>Contact</Link></li>
-    <li><Link to="/license" onClick={onLinkClick}>License</Link></li>
   </ul>
 );
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 import "../styles/faq.css";
 
 const faqData = [

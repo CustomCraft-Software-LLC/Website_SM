@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/CustomCraft-Software-LLC/Website_SM#readme",
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.6",
     "gatsby": "^5.13.7",
     "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-gtag": "^1.0.13",

@@ -1,5 +1,5 @@
 import React from "react";
-import SEO from "../components/SEO";
+import SEO from "../components/Seo";
 import Layout from "../components/Layout";
 import ContactForm from "../components/ContactForm";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter } from "react-icons/fa";

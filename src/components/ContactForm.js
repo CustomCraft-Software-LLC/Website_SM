@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TextField, Button, Box } from '@mui/material';
 import '../styles/contactForm.css';
 
 const ContactForm = () => {
@@ -10,47 +11,48 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(data);
     }
 
     return (
-        <form className="contact-form" onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input 
-                    type="text" 
-                    name="name" 
-                    value={data.name} 
-                    onChange={handleChange} 
-                    required 
-                />
-            </label>
+        <Box component="form" className="contact-form" onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <TextField
+                label="Name"
+                variant="outlined"
+                name="name"
+                value={data.name}
+                onChange={handleChange}
+                required
+                fullWidth
+            />
 
-            <label>
-                Email:
-                <input 
-                    type="email" 
-                    name="email" 
-                    value={data.email} 
-                    onChange={handleChange} 
-                    required 
-                />
-            </label>
+            <TextField
+                label="Email"
+                variant="outlined"
+                name="email"
+                value={data.email}
+                onChange={handleChange}
+                required
+                type="email"
+                fullWidth
+            />
 
-            <label>
-                Message:
-                <textarea 
-                    name="message" 
-                    value={data.message} 
-                    onChange={handleChange}
-                    maxLength={1000} 
-                    required 
-                    rows={6}
-                />
-            </label>
+            <TextField
+                label="Message"
+                variant="outlined"
+                name="message"
+                value={data.message}
+                onChange={handleChange}
+                required
+                multiline
+                rows={6}
+                inputProps={{ maxLength: 1000 }}
+                fullWidth
+            />
 
-            <button type="submit" className="submit-button">Submit</button>
-        </form>
+            <Button type="submit" variant="contained" className="submit-button">
+                Submit
+            </Button>
+        </Box>
     );
 }
 

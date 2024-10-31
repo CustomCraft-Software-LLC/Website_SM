@@ -1,13 +1,24 @@
 import React from "react";
+import { Box, Typography, Button } from "@mui/material";
 import "../styles/cta.css";
 
 const Cta = () => (
   <section className="cta-section">
-    <h2 className="cta-heading">Ready to get started?</h2>
-    <p className="cta-description">
-      Contact us today to learn more about how we can help you achieve your business goals.
-    </p>
-    <a href="/contact" className="btn-primary">Contact Us</a>
+    <Box textAlign="center" sx={{ padding: 3 }}>
+      <Typography variant="h4" className="cta-heading">Ready to get started?</Typography>
+      <Typography variant="body1" className="cta-description">
+        Contact us today to learn more about how we can help you achieve your business goals.
+      </Typography>
+      <Button 
+        variant="contained" 
+        color="primary" 
+        href="/contact" 
+        className="btn-primary"
+        sx={{ marginTop: 2 }}
+      >
+        Contact Us
+      </Button>
+    </Box>
   </section>
 );
 

@@ -1,66 +1,71 @@
 import React from "react";
-import "../styles/layout.css";
+import { Box, Typography, Link, Grid } from "@mui/material";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
+import "../styles/layout.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-column">
-            <h4>Contact Us</h4>
-            <p>
-              <FaPhone /> 
-              <a href="tel:+1234567890" aria-label="Phone number"> +123-456-7890</a>
-            </p>
-            <p>
-              <FaEnvelope /> 
-              <a href="mailto:info@yourbusiness.com" aria-label="Email address"> info@yourbusiness.com</a>
-            </p>
-          </div>
-          <div className="footer-column">
-            <h4>Business Hours</h4>
-            <p>Mon - Fri: 9:00 AM - 5:00 PM</p>
-            <p>Sat - Sun: Closed</p>
-          </div>
-          <div className="footer-column">
-            <h4>Follow Us</h4>
-            <ul className="social-links">
+      <Box className="container" sx={{ padding: 3, backgroundColor: '#f8f8f8' }}>
+        <Grid container spacing={2} className="footer-content">
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Contact Us</Typography>
+            <Typography>
+              <FaPhone />
+              <Link href="tel:+1234567890" aria-label="Phone number"> +123-456-7890</Link>
+            </Typography>
+            <Typography>
+              <FaEnvelope />
+              <Link href="mailto:info@yourbusiness.com" aria-label="Email address"> info@yourbusiness.com</Link>
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Business Hours</Typography>
+            <Typography>Mon - Fri: 9:00 AM - 5:00 PM</Typography>
+            <Typography>Sat - Sun: Closed</Typography>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Follow Us</Typography>
+            <Box component="ul" className="social-links" sx={{ listStyle: 'none', padding: 0 }}>
               <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <FaTwitter />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedin />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram />
-                </a>
+                </Link>
               </li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h4>Useful Links</h4>
-            <ul className="footer-links">
-              <li><a href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a></li>
-              <li><a href="/terms-of-service" aria-label="Terms of Service">Terms of Service</a></li>
-              <li><a href="/faq" aria-label="FAQ">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} Your Business Name. All rights reserved.</p>
-        </div>
-      </div>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <Typography variant="h6">Useful Links</Typography>
+            <Box component="ul" className="footer-links" sx={{ listStyle: 'none', padding: 0 }}>
+              <li><Link href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" aria-label="Terms of Service">Terms of Service</Link></li>
+              <li><Link href="/faq" aria-label="FAQ">FAQ</Link></li>
+            </Box>
+          </Grid>
+        </Grid>
+
+        <Box className="footer-bottom" sx={{ marginTop: 2, textAlign: 'center' }}>
+          <Typography variant="body2">© {new Date().getFullYear()} Your Business Name. All rights reserved.</Typography>
+        </Box>
+      </Box>
     </footer>
   );
 };

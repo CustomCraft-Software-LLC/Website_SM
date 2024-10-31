@@ -1,6 +1,7 @@
 import React from "react";
-import "../styles/services.css";
+import { Box, Typography, List, ListItem, ListItemIcon } from "@mui/material";
 import { FaBullhorn, FaBriefcase, FaLightbulb, FaPaintBrush, FaTasks } from "react-icons/fa";
+import "../styles/services.css";
 
 const servicesData = [
   {
@@ -31,23 +32,29 @@ const servicesData = [
 ];
 
 const ServiceItem = ({ title, description, icon }) => (
-  <li className="service-item">
-    <div className="service-icon">{icon}</div>
-    <h3 className="service-title">{title}</h3>
-    <p className="service-description">{description}</p>
-  </li>
+  <ListItem className="service-item">
+    <ListItemIcon className="service-icon">
+      {icon}
+    </ListItemIcon>
+    <Box>
+      <Typography variant="h6" className="service-title">{title}</Typography>
+      <Typography variant="body2" className="service-description">{description}</Typography>
+    </Box>
+  </ListItem>
 );
 
 const Services = () => (
   <section className="services-section">
     <div className="container">
-      <h2 className="section-heading">Our Services</h2>
-      <p className="section-description">We offer a variety of services tailored to meet your business needs and help you succeed.</p>
-      <ul className="services-list">
+      <Typography variant="h4" className="section-heading">Our Services</Typography>
+      <Typography variant="body1" className="section-description">
+        We offer a variety of services tailored to meet your business needs and help you succeed.
+      </Typography>
+      <List className="services-list">
         {servicesData.map((service, index) => (
           <ServiceItem key={index} title={service.title} description={service.description} icon={service.icon} />
         ))}
-      </ul>
+      </List>
     </div>
   </section>
 );

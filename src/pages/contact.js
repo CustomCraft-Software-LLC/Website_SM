@@ -1,5 +1,5 @@
 import React from "react";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import ContactForm from "../components/ContactForm";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter } from "react-icons/fa";
@@ -25,7 +25,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <SEO 
+      <Seo 
         title="Contact Us" 
         description="Reach out to us for any inquiries or business opportunities. We're excited to connect with you!"
         url="https://yourdomain.com/contact"

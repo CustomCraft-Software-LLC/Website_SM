@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import "../styles/faq.css";
 
 const faqData = [
@@ -31,7 +31,7 @@ const Faq = () => {
 
   return (
     <Layout>
-      <SEO 
+      <Seo 
         title="FAQ" 
         description="Frequently asked questions about our services, pricing, and more."
         url="https://yourdomain.com/faq"

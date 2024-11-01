@@ -1,11 +1,11 @@
 import React from "react";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import "../styles/404.css";
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO 
+    <Seo 
       title="404 - Page Not Found" 
       description="The page you are looking for does not exist. Learn more about our business, mission, and team."
       url="https://yourdomain.com/404"

@@ -1,5 +1,5 @@
 import React from "react";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import "../styles/about.css";
 
@@ -19,7 +19,7 @@ const TeamMember = ({ name, position, imageSrc }) => (
 
 const About = () => (
   <Layout>
-    <SEO 
+    <Seo 
       title="About Us - Your Business Name" 
       description="Discover the story of Your Business Name, our mission, values, and meet the team that drives our success." 
       url="https://yourdomain.com/about" 

@@ -1,11 +1,11 @@
 import React from "react";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import "../styles/pricing.css";
 
 const Pricing = () => (
   <Layout>
-    <SEO 
+    <Seo
       title="Pricing Plans" 
       description="Explore our competitive pricing options tailored for all business types." 
       url="https://yourdomain.com/pricing"

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import Seo from "../components/Seo";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Cta from "../components/Cta";
@@ -8,7 +8,7 @@ import "../styles/index.css";
 
 const Index = () => (
   <Layout>
-    <SEO 
+    <Seo 
       title="Home" 
       description="Welcome to Your Business Name. We provide top-notch services to our clients."
       url="https://yourdomain.com/"

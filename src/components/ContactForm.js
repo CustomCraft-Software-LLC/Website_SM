@@ -87,7 +87,6 @@ const ContactForm = () => {
                 fullWidth
                 error={!!errors.message}
                 helperText={errors.message}
-                inputProps={{ maxLength: 1000 }}
             />
 
             <Button

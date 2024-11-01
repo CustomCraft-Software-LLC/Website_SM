@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
 
 const NavLinks = ({ onLinkClick }) => (
-  <List sx={{ display: "flex", gap: "16px", padding: 0 }}>
+  <List sx={{ display: "flex", gap: "16px", padding: 0, flexDirection: { xs: 'column', md: 'row' } }}>
     {[
       { text: "Home", to: "/" },
       { text: "About", to: "/about" },
@@ -19,7 +19,7 @@ const NavLinks = ({ onLinkClick }) => (
         onClick={onLinkClick}
         key={text}
         sx={{
-          color: "#fff",
+          color: "#003",
           padding: "8px 16px",
           "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.1)" },
         }}
@@ -45,8 +45,8 @@ const Header = () => {
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: "#333",
-        color: "#fff",
+        backgroundColor: "#f8f8f8",
+        color: "#003",
         top: 0,
         zIndex: 1000,
       }}
@@ -57,25 +57,20 @@ const Header = () => {
           component={Link}
           to="/"
           sx={{
-            color: "#fff",
+            color: "#003",
             textDecoration: "none",
             fontWeight: "bold",
-            flexGrow: 1,
           }}
         >
           Your Business Name
         </Typography>
 
-        {/* Horizontal NavLinks for desktop view */}
-        <nav
-          sx={{
-            display: { xs: "none", md: "flex" },
-          }}
-        >
+        {/* Desktop Navigation */}
+        <nav sx={{ display: { xs: "none", md: "flex" } }}>
           <NavLinks onLinkClick={closeMobileMenu} />
         </nav>
 
-        {/* Mobile Menu Icon and Drawer */}
+        {/* Mobile Menu Icon */}
         <IconButton
           edge="end"
           color="inherit"
@@ -89,15 +84,15 @@ const Header = () => {
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </IconButton>
 
+        {/* Mobile Drawer */}
         <Drawer
           anchor="right"
           open={isMobileMenuOpen}
           onClose={closeMobileMenu}
           sx={{
-            display: { xs: "block", md: "none" }, // Only show Drawer on mobile screens
             "& .MuiDrawer-paper": {
               width: "250px",
-              backgroundColor: "#444",
+              backgroundColor: "#333",
               color: "#fff",
               paddingTop: "20px",
             },

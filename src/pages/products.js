@@ -4,7 +4,6 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import "../styles/products.css";
 
-// Updated product data with descriptions and alternative placeholder images
 const productData = [
   {
     category: "Fruits",
@@ -69,7 +68,7 @@ const Products = () => (
           >
             {items.map(({ name, description, image }) => (
               <Box key={name} sx={{ maxWidth: 250 }}>
-                <Card sx={{ maxWidth: 250, mx: "auto", borderRadius: "8px", boxShadow: 3 }}>
+                <Card sx={{ width: 250, height: 320, mx: "auto", borderRadius: "8px", boxShadow: 3 }}>
                   <CardMedia
                     component="img"
                     height="140"
@@ -77,7 +76,7 @@ const Products = () => (
                     alt={name}
                     sx={{ objectFit: "cover" }}
                   />
-                  <CardContent sx={{ textAlign: "center" }}>
+                  <CardContent sx={{ textAlign: "center", height: "120px" }}>
                     <Typography variant="h6" component="div" gutterBottom>
                       {name}
                     </Typography>

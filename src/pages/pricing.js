@@ -6,77 +6,76 @@ import "../styles/pricing.css";
 const Pricing = () => (
   <Layout>
     <Seo
-      title="Pricing Plans" 
-      description="Explore our competitive pricing options tailored for all business types." 
-      url="https://yourdomain.com/pricing"
-      key="pricing, services, plans, affordable, your business name"
+      title="Membership Plans" 
+      description="Choose from our flexible membership options to save on groceries and enjoy exclusive benefits." 
+      url="https://yourdomain.com/membership"
+      key="membership, pricing, grocery plans, savings, grocery store name"
     />
     
     <section className="pricing-section">
-      <h1 className="pricing-title">Our Pricing Plans</h1>
+      <h1 className="pricing-title">Our Membership Plans</h1>
       <p className="pricing-intro">
-        Choose from our flexible pricing plans designed to fit any business type and need.
+        Sign up for a membership to enjoy exclusive discounts, free deliveries, and other benefits tailored for regular shoppers.
       </p>
       
       <div className="pricing-plans">
         <div className="pricing-card">
-          <h2 className="plan-title">Basic Plan</h2>
-          <p className="plan-price">$49/month</p>
+          <h2 className="plan-title">Basic Membership</h2>
+          <p className="plan-price">Free</p>
           <p className="plan-description">
-            Ideal for individuals and startups looking for essential services.
+            Perfect for occasional shoppers who want access to basic savings.
           </p>
           <ul className="plan-features">
-            <li>✔️ Up to 10 service hours per month</li>
-            <li>✔️ Email support</li>
-            <li>✔️ Access to online resources and guides</li>
-            <li>✔️ Monthly performance reports</li>
+            <li>✔️ Access to weekly discounts and deals</li>
+            <li>✔️ Digital coupons</li>
+            <li>✔️ Monthly newsletter with recipes and tips</li>
           </ul>
-          <button className="plan-button">Select Basic Plan</button>
+          <button className="plan-button">Sign Up for Free</button>
         </div>
 
         <div className="pricing-card">
-          <h2 className="plan-title">Standard Plan</h2>
-          <p className="plan-price">$99/month</p>
+          <h2 className="plan-title">Plus Membership</h2>
+          <p className="plan-price">$19.99/month</p>
           <p className="plan-description">
-            Perfect for small businesses seeking to grow and enhance their operations.
+            Ideal for frequent shoppers looking to maximize savings and convenience.
           </p>
           <ul className="plan-features">
-            <li>✔️ Up to 30 service hours per month</li>
-            <li>✔️ Phone and email support</li>
-            <li>✔️ Quarterly strategy sessions</li>
-            <li>✔️ Access to exclusive webinars and workshops</li>
+            <li>✔️ 5% off all purchases</li>
+            <li>✔️ Free delivery on orders over $50</li>
+            <li>✔️ Early access to seasonal items and sales</li>
+            <li>✔️ Exclusive monthly recipes and cooking tips</li>
           </ul>
-          <button className="plan-button">Select Standard Plan</button>
+          <button className="plan-button">Select Plus Membership</button>
         </div>
 
         <div className="pricing-card">
-          <h2 className="plan-title">Premium Plan</h2>
-          <p className="plan-price">$199/month</p>
+          <h2 className="plan-title">Premium Membership</h2>
+          <p className="plan-price">$49.99/month</p>
           <p className="plan-description">
-            For established businesses requiring comprehensive support and tailored solutions.
+            For dedicated shoppers who want maximum savings, flexibility, and perks.
           </p>
           <ul className="plan-features">
-            <li>✔️ Up to 60 service hours per month</li>
-            <li>✔️ 24/7 priority support</li>
-            <li>✔️ Custom service solutions tailored to your needs</li>
-            <li>✔️ Marketing and outreach support</li>
-            <li>✔️ Detailed analytics and reporting</li>
+            <li>✔️ 10% off all purchases</li>
+            <li>✔️ Free delivery on all orders</li>
+            <li>✔️ Access to exclusive in-store events and workshops</li>
+            <li>✔️ Priority customer support</li>
+            <li>✔️ Personalized grocery planning assistance</li>
           </ul>
-          <button className="plan-button">Select Premium Plan</button>
+          <button className="plan-button">Select Premium Membership</button>
         </div>
 
         <div className="pricing-card">
-          <h2 className="plan-title">Enterprise Plan</h2>
+          <h2 className="plan-title">Corporate Plan</h2>
           <p className="plan-price">Custom Pricing</p>
           <p className="plan-description">
-            Tailored solutions for large organizations with specialized needs.
+            Tailored for businesses and organizations requiring bulk purchasing or customized grocery solutions.
           </p>
           <ul className="plan-features">
-            <li>✔️ Unlimited service hours</li>
+            <li>✔️ Bulk purchasing discounts</li>
             <li>✔️ Dedicated account manager</li>
-            <li>✔️ Comprehensive market analysis</li>
-            <li>✔️ Training and development programs</li>
-            <li>✔️ Customizable solutions and integrations</li>
+            <li>✔️ Custom delivery scheduling</li>
+            <li>✔️ Employee benefit programs</li>
+            <li>✔️ Flexible payment options</li>
           </ul>
           <button className="plan-button">Contact Sales</button>
         </div>

@@ -1,58 +1,63 @@
 import React from "react";
 import { Box, Typography, List, ListItem, ListItemIcon } from "@mui/material";
-import { FaBullhorn, FaBriefcase, FaLightbulb, FaPaintBrush, FaTasks } from "react-icons/fa";
+import { FaShoppingCart, FaTruck, FaAppleAlt, FaSeedling, FaGift } from "react-icons/fa";
 import "../styles/services.css";
 
 const servicesData = [
   {
-    title: "Consulting Services",
-    description: "We provide expert guidance and insights to help businesses make informed decisions and achieve their strategic goals.",
-    icon: <FaLightbulb />,
+    title: "Fresh Produce Selection",
+    description: "We offer a wide range of fresh fruits and vegetables sourced from local farms and trusted suppliers.",
+    icon: FaAppleAlt,
   },
   {
-    title: "Marketing Solutions",
-    description: "Our marketing services help businesses enhance their brand presence, attract customers, and grow through customized strategies.",
-    icon: <FaBullhorn />,
+    title: "Home Delivery",
+    description: "Convenient grocery delivery services right to your doorstep. Enjoy fresh groceries without leaving home.",
+    icon: FaTruck,
   },
   {
-    title: "Business Support & Operations",
-    description: "We offer comprehensive support and operational services to streamline your business processes and improve efficiency.",
-    icon: <FaBriefcase />,
+    title: "Organic & Specialty Foods",
+    description: "A variety of organic and specialty food products to meet diverse dietary needs and preferences.",
+    icon: FaSeedling,
   },
   {
-    title: "Creative Design",
-    description: "Our design services bring your brand to life with unique visuals, from logos to promotional materials, tailored to your needs.",
-    icon: <FaPaintBrush />,
+    title: "Weekly Discounts & Deals",
+    description: "Take advantage of weekly promotions and discounts on popular items throughout the store.",
+    icon: FaShoppingCart,
   },
   {
-    title: "Project Management",
-    description: "We help manage projects from start to finish, ensuring they are completed on time, within budget, and to your satisfaction.",
-    icon: <FaTasks />,
+    title: "Gift Baskets",
+    description: "Custom gift baskets for any occasion, featuring a selection of our finest products.",
+    icon: FaGift,
   },
 ];
 
-const ServiceItem = ({ title, description, icon }) => (
-  <ListItem className="service-item">
-    <ListItemIcon className="service-icon">
-      {icon}
+const ServiceItem = ({ title, description, IconComponent }) => (
+  <ListItem className="services__item">
+    <ListItemIcon className="services__icon">
+      <IconComponent />
     </ListItemIcon>
     <Box>
-      <Typography variant="h6" className="service-title">{title}</Typography>
-      <Typography variant="body2" className="service-description">{description}</Typography>
+      <Typography variant="h6" className="services__title">{title}</Typography>
+      <Typography variant="body2" className="services__description">{description}</Typography>
     </Box>
   </ListItem>
 );
 
 const Services = () => (
-  <section className="services-section">
+  <section className="services">
     <div className="container">
-      <Typography variant="h4" className="section-heading">Our Services</Typography>
-      <Typography variant="body1" className="section-description">
-        We offer a variety of services tailored to meet your business needs and help you succeed.
+      <Typography variant="h4" className="services__heading">Our Services</Typography>
+      <Typography variant="body1" className="services__description">
+        Discover our range of services designed to make your grocery shopping experience more enjoyable and convenient.
       </Typography>
-      <List className="services-list">
+      <List className="services__list">
         {servicesData.map((service, index) => (
-          <ServiceItem key={index} title={service.title} description={service.description} icon={service.icon} />
+          <ServiceItem 
+            key={index} 
+            title={service.title} 
+            description={service.description} 
+            IconComponent={service.icon} 
+          />
         ))}
       </List>
     </div>

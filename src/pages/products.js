@@ -1,39 +1,40 @@
 import React from "react";
-import { Box, Typography, Grid, Card, CardContent, CardMedia, Button } from "@mui/material";
+import { Box, Typography, Card, CardContent, CardMedia } from "@mui/material";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import "../styles/products.css";
 
+// Updated product data with descriptions and alternative placeholder images
 const productData = [
-    { 
-      category: "Fruits", 
-      items: [
-        { name: "Apple", price: "$1.00", image: "https://images.unsplash.com/photo-1571047405277-7217d4d1e104" },
-        { name: "Banana", price: "$0.50", image: "https://images.unsplash.com/photo-1582491447388-3f6704b965f1" }
-      ] 
-    },
-    { 
-      category: "Vegetables", 
-      items: [
-        { name: "Carrot", price: "$0.70", image: "https://images.unsplash.com/photo-1542826438-8e3f44e6ec26" },
-        { name: "Broccoli", price: "$1.20", image: "https://images.unsplash.com/photo-1556911220-e15b29be8c0f" }
-      ] 
-    },
-    { 
-      category: "Dairy", 
-      items: [
-        { name: "Milk", price: "$2.00", image: "https://images.unsplash.com/photo-1581868167762-30f9c7c37832" },
-        { name: "Cheese", price: "$3.50", image: "https://images.unsplash.com/photo-1622825686007-cd6c9abf569d" }
-      ] 
-    },
-    { 
-      category: "Snacks", 
-      items: [
-        { name: "Chips", price: "$1.50", image: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a" },
-        { name: "Cookies", price: "$2.00", image: "https://images.unsplash.com/photo-1599815200769-4b9cfb58e994" }
-      ] 
-    },
-  ];
+  {
+    category: "Fruits",
+    items: [
+      { name: "Apple", price: "$1.00", description: "Crisp and juicy apples.", image: "https://via.placeholder.com/150?text=Apple" },
+      { name: "Banana", price: "$0.50", description: "Sweet and ripe bananas.", image: "https://via.placeholder.com/150?text=Banana" }
+    ]
+  },
+  {
+    category: "Vegetables",
+    items: [
+      { name: "Carrot", price: "$0.70", description: "Fresh and crunchy carrots.", image: "https://via.placeholder.com/150?text=Carrot" },
+      { name: "Broccoli", price: "$1.20", description: "Healthy green broccoli.", image: "https://via.placeholder.com/150?text=Broccoli" }
+    ]
+  },
+  {
+    category: "Dairy",
+    items: [
+      { name: "Milk", price: "$2.00", description: "Fresh cow's milk.", image: "https://via.placeholder.com/150?text=Milk" },
+      { name: "Cheese", price: "$3.50", description: "Delicious cheddar cheese.", image: "https://via.placeholder.com/150?text=Cheese" }
+    ]
+  },
+  {
+    category: "Snacks",
+    items: [
+      { name: "Chips", price: "$1.50", description: "Crispy potato chips.", image: "https://via.placeholder.com/150?text=Chips" },
+      { name: "Cookies", price: "$2.00", description: "Sweet chocolate cookies.", image: "https://via.placeholder.com/150?text=Cookies" }
+    ]
+  },
+];
 
 const Products = () => (
   <Layout>
@@ -58,10 +59,17 @@ const Products = () => (
             {category}
           </Typography>
           
-          <Grid container spacing={3} justifyContent="center">
-            {items.map(({ name, price, image }) => (
-              <Grid item xs={12} sm={6} md={3} key={name}>
-                <Card sx={{ maxWidth: 250, mx: "auto" }}>
+          <Box 
+            sx={{ 
+              display: "flex", 
+              flexWrap: "wrap", 
+              gap: 3, 
+              justifyContent: "center" 
+            }}
+          >
+            {items.map(({ name, description, image }) => (
+              <Box key={name} sx={{ maxWidth: 250 }}>
+                <Card sx={{ maxWidth: 250, mx: "auto", borderRadius: "8px", boxShadow: 3 }}>
                   <CardMedia
                     component="img"
                     height="140"
@@ -70,16 +78,17 @@ const Products = () => (
                     sx={{ objectFit: "cover" }}
                   />
                   <CardContent sx={{ textAlign: "center" }}>
-                    <Typography variant="h6">{name}</Typography>
-                    <Typography color="textSecondary">{price}</Typography>
-                    <Button variant="contained" color="primary" sx={{ marginTop: "8px" }}>
-                      Add to Cart
-                    </Button>
+                    <Typography variant="h6" component="div" gutterBottom>
+                      {name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {description}
+                    </Typography>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Box>
       ))}
     </Box>

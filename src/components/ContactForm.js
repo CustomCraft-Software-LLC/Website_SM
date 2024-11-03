@@ -26,7 +26,6 @@ const ContactForm = () => {
             setSubmitted(true);
             setData({ name: "", email: "", message: "" });
             setErrors({});
-            // Here you could send `data` to an API or handle form submission
         }
     };
 

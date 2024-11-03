@@ -1,96 +1,87 @@
 import React from "react";
+import { Container, Box, Typography, Button, Card, CardContent, Stack } from "@mui/material";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
-import "../styles/pricing.css";
 
-const Plan = ({ title, price, description, features, buttonText, onButtonClick }) => (
-  <div className="pricing-card">
-    <h2 className="plan-title">{title}</h2>
-    <p className="plan-price">{price}</p>
-    <p className="plan-description">{description}</p>
-    <ul className="plan-features">
-      {features.map((feature, index) => (
-        <li key={index}>{feature}</li>
-      ))}
-    </ul>
-    <button className="plan-button" onClick={onButtonClick}>{buttonText}</button>
-  </div>
+const ItemCard = ({ title, price, description, buttonText, onButtonClick }) => (
+  <Card sx={{ maxWidth: 320, textAlign: 'center', borderRadius: 2, boxShadow: 3, mx: 'auto' }}>
+    <CardContent>
+      <Typography variant="h5" component="h2" sx={{ fontWeight: 'bold', mb: 1 }}>
+        {title}
+      </Typography>
+      <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold', mb: 2 }}>
+        {price}
+      </Typography>
+      <Typography variant="body2" color="textSecondary" sx={{ mb: 2 }}>
+        {description}
+      </Typography>
+      <Button 
+        variant="contained" 
+        color="primary" 
+        fullWidth 
+        onClick={onButtonClick}
+        sx={{ fontWeight: 'bold', mt: 2 }}
+      >
+        {buttonText}
+      </Button>
+    </CardContent>
+  </Card>
 );
 
 const Pricing = () => (
   <Layout>
     <Seo
-      title="Membership Plans"
-      description="Choose from our flexible membership options to save on groceries and enjoy exclusive benefits."
-      url="https://yourdomain.com/membership"
-      key="membership, pricing, grocery plans, savings, grocery store name"
+      title="Grocery Store Pricing"
+      description="Explore a selection of popular grocery items at affordable prices."
+      url="https://yourdomain.com/grocery-pricing"
+      keywords={["grocery items", "apples", "chips", "milk", "noodles", "grocery store pricing"]}
     />
-
-    <section className="pricing-section">
-      <h1 className="pricing-title">Our Membership Plans</h1>
-      <p className="pricing-intro">
-        Sign up for a membership to enjoy exclusive discounts, free deliveries, and other benefits tailored for regular shoppers.
-      </p>
-
-      <div className="pricing-plans">
-        <Plan
-          title="Basic Membership"
-          price="Free"
-          description="Perfect for occasional shoppers who want access to basic savings."
-          features={[
-            "✔️ Access to weekly discounts and deals",
-            "✔️ Digital coupons",
-            "✔️ Monthly newsletter with recipes and tips",
-          ]}
-          buttonText="Sign Up for Free"
-          onButtonClick={() => alert("Basic Membership selected")}
+    <Container maxWidth="lg" sx={{ textAlign: 'center', py: 8 }}>
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          Grocery Store Pricing
+        </Typography>
+        <Typography variant="body1">
+          Browse our selection of fresh produce, snacks, and essentials, available at great prices.
+        </Typography>
+      </Box>
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={4}
+        justifyContent="center"
+        alignItems="center"
+        sx={{ flexWrap: 'wrap', gap: 4 }}
+      >
+        <ItemCard
+          title="Apples"
+          price="$1.99/lb"
+          description="Crisp, fresh apples perfect for snacking or baking."
+          buttonText="Buy Now"
+          onButtonClick={() => alert("Apples added to cart")}
         />
-
-        <Plan
-          title="Plus Membership"
-          price="$19.99/month"
-          description="Ideal for frequent shoppers looking to maximize savings and convenience."
-          features={[
-            "✔️ 5% off all purchases",
-            "✔️ Free delivery on orders over $50",
-            "✔️ Early access to seasonal items and sales",
-            "✔️ Exclusive monthly recipes and cooking tips",
-          ]}
-          buttonText="Select Plus Membership"
-          onButtonClick={() => alert("Plus Membership selected")}
+        <ItemCard
+          title="Chips"
+          price="$2.99"
+          description="Classic potato chips with a satisfying crunch."
+          buttonText="Buy Now"
+          onButtonClick={() => alert("Chips added to cart")}
         />
-
-        <Plan
-          title="Premium Membership"
-          price="$49.99/month"
-          description="For dedicated shoppers who want maximum savings, flexibility, and perks."
-          features={[
-            "✔️ 10% off all purchases",
-            "✔️ Free delivery on all orders",
-            "✔️ Access to exclusive in-store events and workshops",
-            "✔️ Priority customer support",
-            "✔️ Personalized grocery planning assistance",
-          ]}
-          buttonText="Select Premium Membership"
-          onButtonClick={() => alert("Premium Membership selected")}
+        <ItemCard
+          title="Noodles"
+          price="$1.50"
+          description="Instant noodles for a quick and tasty meal."
+          buttonText="Buy Now"
+          onButtonClick={() => alert("Noodles added to cart")}
         />
-
-        <Plan
-          title="Corporate Plan"
-          price="Custom Pricing"
-          description="Tailored for businesses and organizations requiring bulk purchasing or customized grocery solutions."
-          features={[
-            "✔️ Bulk purchasing discounts",
-            "✔️ Dedicated account manager",
-            "✔️ Custom delivery scheduling",
-            "✔️ Employee benefit programs",
-            "✔️ Flexible payment options",
-          ]}
-          buttonText="Contact Sales"
-          onButtonClick={() => alert("Corporate Plan selected")}
+        <ItemCard
+          title="Milk"
+          price="$3.49/gallon"
+          description="Fresh milk, ideal for cereal, coffee, and more."
+          buttonText="Buy Now"
+          onButtonClick={() => alert("Milk added to cart")}
         />
-      </div>
-    </section>
+      </Stack>
+    </Container>
   </Layout>
 );
 

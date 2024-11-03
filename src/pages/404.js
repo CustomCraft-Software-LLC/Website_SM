@@ -1,7 +1,8 @@
 import React from "react";
+import { Container, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
-import "../styles/404.css";
 
 const NotFoundPage = () => (
   <Layout>
@@ -11,10 +12,23 @@ const NotFoundPage = () => (
       url="https://yourdomain.com/404"
       key="404-page-not-found"
     />
-    <section className="not-found-section">
-      <h1 className="not-found-title">404 - Page Not Found</h1>
-      <p className="not-found-message">Oops! The page you are looking for does not exist.</p>
-    </section>
+    <Container maxWidth="sm" sx={{ textAlign: 'center', py: 8 }}>
+      <Typography variant="h1" component="h1" gutterBottom>
+        404 - Page Not Found
+      </Typography>
+      <Typography variant="body1" gutterBottom>
+        Oops! The page you are looking for does not exist.
+      </Typography>
+      <Button 
+        variant="contained" 
+        color="primary" 
+        component={Link} 
+        to="/" 
+        sx={{ mt: 3 }}
+      >
+        Go to Homepage
+      </Button>
+    </Container>
   </Layout>
 );
 

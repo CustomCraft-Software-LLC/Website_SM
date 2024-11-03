@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, List, ListItem, ListItemIcon } from "@mui/material";
 import { FaShoppingCart, FaTruck, FaAppleAlt, FaSeedling, FaGift } from "react-icons/fa";
-import "../styles/services.css"; // Make sure this file exists
+import "../styles/services.css";
 
 const servicesData = [
   {

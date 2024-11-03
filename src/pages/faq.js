@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { Container, Typography, Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import "../styles/faq.css";
 
 const faqData = [
   {
@@ -23,12 +24,6 @@ const faqData = [
 ];
 
 const Faq = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <Layout>
       <Seo 
@@ -37,20 +32,27 @@ const Faq = () => {
         url="https://yourdomain.com/faq"
         keywords="faq, questions, help, support"
       />
-      <section className="faq-section">
-        <h1>Frequently Asked Questions</h1>
-        <div className="faq-list">
+      <Container maxWidth="md" sx={{ py: 6 }}>
+        <Typography variant="h3" component="h1" gutterBottom align="center">
+          Frequently Asked Questions
+        </Typography>
+        <div>
           {faqData.map((faq, index) => (
-            <div key={index} className="faq-item">
-              <h3 onClick={() => toggleFAQ(index)} className="faq-question">
-                {faq.question}
-                <span className="faq-toggle">{openIndex === index ? '-' : '+'}</span>
-              </h3>
-              {openIndex === index && <p className="faq-answer">{faq.answer}</p>}
-            </div>
+            <Accordion key={index}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`faq-content-${index}`}
+                id={`faq-header-${index}`}
+              >
+                <Typography variant="h6">{faq.question}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>{faq.answer}</Typography>
+              </AccordionDetails>
+            </Accordion>
           ))}
         </div>
-      </section>
+      </Container>
     </Layout>
   );
 };

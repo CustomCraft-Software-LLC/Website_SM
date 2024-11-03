@@ -3,82 +3,92 @@ import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import "../styles/pricing.css";
 
+const Plan = ({ title, price, description, features, buttonText, onButtonClick }) => (
+  <div className="pricing-card">
+    <h2 className="plan-title">{title}</h2>
+    <p className="plan-price">{price}</p>
+    <p className="plan-description">{description}</p>
+    <ul className="plan-features">
+      {features.map((feature, index) => (
+        <li key={index}>{feature}</li>
+      ))}
+    </ul>
+    <button className="plan-button" onClick={onButtonClick}>{buttonText}</button>
+  </div>
+);
+
 const Pricing = () => (
   <Layout>
     <Seo
-      title="Membership Plans" 
-      description="Choose from our flexible membership options to save on groceries and enjoy exclusive benefits." 
+      title="Membership Plans"
+      description="Choose from our flexible membership options to save on groceries and enjoy exclusive benefits."
       url="https://yourdomain.com/membership"
       key="membership, pricing, grocery plans, savings, grocery store name"
     />
-    
+
     <section className="pricing-section">
       <h1 className="pricing-title">Our Membership Plans</h1>
       <p className="pricing-intro">
         Sign up for a membership to enjoy exclusive discounts, free deliveries, and other benefits tailored for regular shoppers.
       </p>
-      
+
       <div className="pricing-plans">
-        <div className="pricing-card">
-          <h2 className="plan-title">Basic Membership</h2>
-          <p className="plan-price">Free</p>
-          <p className="plan-description">
-            Perfect for occasional shoppers who want access to basic savings.
-          </p>
-          <ul className="plan-features">
-            <li>✔️ Access to weekly discounts and deals</li>
-            <li>✔️ Digital coupons</li>
-            <li>✔️ Monthly newsletter with recipes and tips</li>
-          </ul>
-          <button className="plan-button">Sign Up for Free</button>
-        </div>
+        <Plan
+          title="Basic Membership"
+          price="Free"
+          description="Perfect for occasional shoppers who want access to basic savings."
+          features={[
+            "✔️ Access to weekly discounts and deals",
+            "✔️ Digital coupons",
+            "✔️ Monthly newsletter with recipes and tips",
+          ]}
+          buttonText="Sign Up for Free"
+          onButtonClick={() => alert("Basic Membership selected")}
+        />
 
-        <div className="pricing-card">
-          <h2 className="plan-title">Plus Membership</h2>
-          <p className="plan-price">$19.99/month</p>
-          <p className="plan-description">
-            Ideal for frequent shoppers looking to maximize savings and convenience.
-          </p>
-          <ul className="plan-features">
-            <li>✔️ 5% off all purchases</li>
-            <li>✔️ Free delivery on orders over $50</li>
-            <li>✔️ Early access to seasonal items and sales</li>
-            <li>✔️ Exclusive monthly recipes and cooking tips</li>
-          </ul>
-          <button className="plan-button">Select Plus Membership</button>
-        </div>
+        <Plan
+          title="Plus Membership"
+          price="$19.99/month"
+          description="Ideal for frequent shoppers looking to maximize savings and convenience."
+          features={[
+            "✔️ 5% off all purchases",
+            "✔️ Free delivery on orders over $50",
+            "✔️ Early access to seasonal items and sales",
+            "✔️ Exclusive monthly recipes and cooking tips",
+          ]}
+          buttonText="Select Plus Membership"
+          onButtonClick={() => alert("Plus Membership selected")}
+        />
 
-        <div className="pricing-card">
-          <h2 className="plan-title">Premium Membership</h2>
-          <p className="plan-price">$49.99/month</p>
-          <p className="plan-description">
-            For dedicated shoppers who want maximum savings, flexibility, and perks.
-          </p>
-          <ul className="plan-features">
-            <li>✔️ 10% off all purchases</li>
-            <li>✔️ Free delivery on all orders</li>
-            <li>✔️ Access to exclusive in-store events and workshops</li>
-            <li>✔️ Priority customer support</li>
-            <li>✔️ Personalized grocery planning assistance</li>
-          </ul>
-          <button className="plan-button">Select Premium Membership</button>
-        </div>
+        <Plan
+          title="Premium Membership"
+          price="$49.99/month"
+          description="For dedicated shoppers who want maximum savings, flexibility, and perks."
+          features={[
+            "✔️ 10% off all purchases",
+            "✔️ Free delivery on all orders",
+            "✔️ Access to exclusive in-store events and workshops",
+            "✔️ Priority customer support",
+            "✔️ Personalized grocery planning assistance",
+          ]}
+          buttonText="Select Premium Membership"
+          onButtonClick={() => alert("Premium Membership selected")}
+        />
 
-        <div className="pricing-card">
-          <h2 className="plan-title">Corporate Plan</h2>
-          <p className="plan-price">Custom Pricing</p>
-          <p className="plan-description">
-            Tailored for businesses and organizations requiring bulk purchasing or customized grocery solutions.
-          </p>
-          <ul className="plan-features">
-            <li>✔️ Bulk purchasing discounts</li>
-            <li>✔️ Dedicated account manager</li>
-            <li>✔️ Custom delivery scheduling</li>
-            <li>✔️ Employee benefit programs</li>
-            <li>✔️ Flexible payment options</li>
-          </ul>
-          <button className="plan-button">Contact Sales</button>
-        </div>
+        <Plan
+          title="Corporate Plan"
+          price="Custom Pricing"
+          description="Tailored for businesses and organizations requiring bulk purchasing or customized grocery solutions."
+          features={[
+            "✔️ Bulk purchasing discounts",
+            "✔️ Dedicated account manager",
+            "✔️ Custom delivery scheduling",
+            "✔️ Employee benefit programs",
+            "✔️ Flexible payment options",
+          ]}
+          buttonText="Contact Sales"
+          onButtonClick={() => alert("Corporate Plan selected")}
+        />
       </div>
     </section>
   </Layout>

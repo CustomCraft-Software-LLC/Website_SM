@@ -66,12 +66,10 @@ const Header = () => {
           Your Business Name
         </Typography>
 
-        {/* Desktop Navigation */}
         <nav sx={{ display: { xs: "none", md: "flex" } }}>
           <NavLinks onLinkClick={closeMobileMenu} />
         </nav>
 
-        {/* Mobile Menu Icon */}
         <IconButton
           edge="end"
           color="inherit"
@@ -85,7 +83,6 @@ const Header = () => {
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
         </IconButton>
 
-        {/* Mobile Drawer */}
         <Drawer
           anchor="right"
           open={isMobileMenuOpen}
@@ -94,7 +91,7 @@ const Header = () => {
             "& .MuiDrawer-paper": {
               width: "250px",
               backgroundColor: "#333",
-              color: "#fff",
+              color: "#003",
               paddingTop: "20px",
             },
           }}

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: "Your Business Name",
@@ -25,7 +27,7 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp", // Corrected the typo here
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -50,6 +52,14 @@ module.exports = {
         theme_color: "#317EFB",
         display: "standalone",
         icon: "src/images/icon.png",
+      },
+    },
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        storeUrl: process.env.SHOPIFY_STORE_URL,
+        password: process.env.SHOPIFY_ACCESS_TOKEN,
+        apiVersion: "2023-10",
       },
     },
   ],

@@ -24,3 +24,35 @@ exports.onCreatePage = async ({ page, actions }) => {
     });
   }
 };
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const productTemplate = require.resolve(`./src/templates/product.js`);
+
+  const result = await graphql(`
+    {
+      allShopifyProduct {
+        edges {
+          node {
+            handle
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    console.error('Error querying Shopify products:', result.errors);
+    return;
+  }
+
+  result.data.allShopifyProduct.edges.forEach(({ node }) => {
+    createPage({
+      path: `/product/${node.handle}`,
+      component: productTemplate,
+      context: {
+        handle: node.handle,
+      },
+    });
+  });
+};

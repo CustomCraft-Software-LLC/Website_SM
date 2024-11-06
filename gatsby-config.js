@@ -31,13 +31,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
       },
     },
     {
       resolve: "gatsby-plugin-gtag",
       options: {
-        trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
         head: true,
       },
     },
@@ -57,8 +57,8 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        storeUrl: process.env.SHOPIFY_STORE_URL,
-        password: process.env.SHOPIFY_ACCESS_TOKEN,
+        storeUrl: process.env.SHOPIFY_STORE_URL || "https://your-shop.myshopify.com",
+        storefrontAccessToken: process.env.SHOPIFY_ACCESS_TOKEN || "your-storefront-access-token",
         apiVersion: "2023-10",
       },
     },

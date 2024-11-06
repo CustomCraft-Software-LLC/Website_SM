@@ -28,6 +28,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.1.6",
+    "dotenv": "^16.4.5",
     "dotnet": "^1.1.4",
     "gatsby": "^5.13.7",
     "gatsby-plugin-google-analytics": "^5.13.1",

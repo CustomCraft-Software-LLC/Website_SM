@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Container, Grid, Card, CardContent, CardMedia, Typography, Button } from "@mui/material";
 
-const ProductsPage = ({ data }) => {
+const Products = ({ data }) => {
   const products = data.allShopifyProduct.nodes;
 
   return (
@@ -60,4 +60,4 @@ export const query = graphql`
   }
 `;
 
-export default ProductsPage;
+export default Products;

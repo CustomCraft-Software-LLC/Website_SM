@@ -1,6 +1,6 @@
 {
   "name": "website_sm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Website boilerplate for small business",
   "main": "index.js",
   "scripts": {

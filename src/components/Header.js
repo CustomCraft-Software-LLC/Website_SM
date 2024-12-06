@@ -10,7 +10,7 @@ const NavLinks = ({ onLinkClick }) => (
       { text: "About", to: "/Website_SM/about" },
       { text: "Pricing", to: "/Website_SM/pricing" },
       { text: "FAQ", to: "/Website_SM/faq" },
-      { text: "Contact", to: "/Wesbite_SM/contact" }
+      { text: "Contact", to: "/Website_SM/contact" }
     ].map(({ text, to }) => (
       <ListItem
         button
@@ -55,7 +55,7 @@ const Header = () => {
         <Typography
           variant="h6"
           component={Link}
-          to="/"
+          to="/Website_SM"
           sx={{
             color: "#003",
             textDecoration: "none",

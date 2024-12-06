@@ -4,97 +4,10 @@
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
-├── public
-│   ├── 577-01ef321c4506f242771d.js
-│   ├── 577-01ef321c4506f242771d.js.map
-│   ├── 79f1b5b41c908ed447d9f5337521cdacbc32bd5e-6bc6cba5e6b0abf3694d.js
-│   ├── 79f1b5b41c908ed447d9f5337521cdacbc32bd5e-6bc6cba5e6b0abf3694d.js.map
-│   ├── app-2068165f1a60ca1ab6e6.js
-│   ├── app-2068165f1a60ca1ab6e6.js.LICENSE.txt
-│   ├── app-2068165f1a60ca1ab6e6.js.map
-│   ├── cb355538-23c0375a3322fae5acf9.js
-│   ├── cb355538-23c0375a3322fae5acf9.js.map
-│   ├── chunk-map.json
-│   ├── component---cache-caches-gatsby-plugin-offline-app-shell-js-98d7db8f0d7571f48803.js
-│   ├── component---cache-caches-gatsby-plugin-offline-app-shell-js-98d7db8f0d7571f48803.js.map
-│   ├── component---src-pages-404-js-37a8f4ff7c277761822c.js
-│   ├── component---src-pages-404-js-37a8f4ff7c277761822c.js.map
-│   ├── component---src-pages-about-js-5dae6894f2ef44e4afb8.js
-│   ├── component---src-pages-about-js-5dae6894f2ef44e4afb8.js.map
-│   ├── component---src-pages-contact-js-6741ea9e0fc8701751e6.js
-│   ├── component---src-pages-contact-js-6741ea9e0fc8701751e6.js.map
-│   ├── component---src-pages-faq-js-6483e85e8bf74659134f.js
-│   ├── component---src-pages-faq-js-6483e85e8bf74659134f.js.map
-│   ├── component---src-pages-index-js-be61ac3fdd9c950abd8a.js
-│   ├── component---src-pages-index-js-be61ac3fdd9c950abd8a.js.map
-│   ├── component---src-pages-pricing-js-78e2c4e9a54f0380313a.js
-│   ├── component---src-pages-pricing-js-78e2c4e9a54f0380313a.js.map
-│   ├── favicon-32x32.png
-│   ├── framework-03aec7f9461a7bb1dbc1.js
-│   ├── framework-03aec7f9461a7bb1dbc1.js.LICENSE.txt
-│   ├── framework-03aec7f9461a7bb1dbc1.js.map
-│   ├── _gatsby
-│   │   └── slices
-│   │       └── _gatsby-scripts-1.html
-│   ├── icons
-│   │   ├── icon-144x144.png
-│   │   ├── icon-192x192.png
-│   │   ├── icon-256x256.png
-│   │   ├── icon-384x384.png
-│   │   ├── icon-48x48.png
-│   │   ├── icon-512x512.png
-│   │   ├── icon-72x72.png
-│   │   └── icon-96x96.png
-│   ├── manifest.webmanifest
-│   ├── page-data
-│   │   ├── 404
-│   │   │   └── page-data.json
-│   │   ├── 404.html
-│   │   │   └── page-data.json
-│   │   ├── about
-│   │   │   └── page-data.json
-│   │   ├── app-data.json
-│   │   ├── contact
-│   │   │   └── page-data.json
-│   │   ├── dev-404-page
-│   │   │   └── page-data.json
-│   │   ├── faq
-│   │   │   └── page-data.json
-│   │   ├── index
-│   │   │   └── page-data.json
-│   │   ├── license
-│   │   ├── offline-plugin-app-shell-fallback
-│   │   │   └── page-data.json
-│   │   ├── pricing
-│   │   │   └── page-data.json
-│   │   ├── products
-│   │   │   └── page-data.json
-│   │   └── sq
-│   │       └── d
-│   │           └── 3764592887.json
-│   ├── ~partytown
-│   │   ├── debug
-│   │   │   ├── partytown-atomics.js
-│   │   │   ├── partytown.js
-│   │   │   ├── partytown-media.js
-│   │   │   ├── partytown-sandbox-sw.js
-│   │   │   ├── partytown-sw.js
-│   │   │   ├── partytown-ww-atomics.js
-│   │   │   └── partytown-ww-sw.js
-│   │   ├── partytown-atomics.js
-│   │   ├── partytown.js
-│   │   ├── partytown-media.js
-│   │   └── partytown-sw.js
-│   ├── robots.txt
-│   ├── static
-│   │   └── hero-background-c67293baf285b7e9c979b6c6b3c7742a.png
-│   ├── styles.c93b43667f13f4cbb868.css
-│   ├── webpack-runtime-dda8d6dad57d6abf59ad.js
-│   ├── webpack-runtime-dda8d6dad57d6abf59ad.js.map
-│   └── webpack.stats.json
 ├── README.md
 ├── src
 │   ├── components
+│   │   ├── Checkout.js
 │   │   ├── ContactForm.js
 │   │   ├── Cta.js
 │   │   ├── Footer.js
@@ -104,6 +17,9 @@
 │   │   ├── ProductList.js
 │   │   ├── Seo.js
 │   │   └── Services.js
+│   ├── contexts
+│   ├── functions
+│   │   └── checkout.js
 │   ├── images
 │   │   ├── hero-background.png
 │   │   └── icon.png
@@ -115,7 +31,9 @@
 │   │   ├── faq.js
 │   │   ├── index.js
 │   │   ├── pricing.js
-│   │   └── products.js
+│   │   ├── product.js.bak
+│   │   ├── products_v1.js.bak
+│   │   └── products_v2.js.bak
 │   └── styles
 │       ├── 404.css
 │       ├── about.css
@@ -132,4 +50,4 @@
 │   └── robots.txt
 └── structure.txt
 
-27 directories, 105 files
+8 directories, 42 files

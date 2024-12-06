@@ -54,6 +54,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    /*
     {
       resolve: "gatsby-source-shopify",
       options: {
@@ -62,5 +63,6 @@ module.exports = {
         apiVersion: "2023-10",
       },
     },
+    */
   ],
 };

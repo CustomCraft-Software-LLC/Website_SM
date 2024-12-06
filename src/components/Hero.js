@@ -12,7 +12,6 @@ const Hero = () => (
         We provide top-notch services to our clients with a focus on quality and customer satisfaction.
       </Typography>
       <Button
-        component="a"
         href="/contact"
         className="btn-primary"
       >

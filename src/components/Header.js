@@ -9,7 +9,6 @@ const NavLinks = ({ onLinkClick }) => (
       { text: "Home", to: "/" },
       { text: "About", to: "/about" },
       { text: "Pricing", to: "/pricing" },
-      { text: "Products", to: "/products" },
       { text: "FAQ", to: "/faq" },
       { text: "Contact", to: "/contact" }
     ].map(({ text, to }) => (

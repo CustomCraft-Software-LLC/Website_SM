@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Card, CardContent, CardMedia, Typography, Button } from '@mui/material';
 
 const ProductList = () => {
+  /*
   const data = useStaticQuery(graphql`
     query {
       allShopifyProduct {
@@ -20,6 +21,7 @@ const ProductList = () => {
       }
     }
   `);
+  */
 
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>

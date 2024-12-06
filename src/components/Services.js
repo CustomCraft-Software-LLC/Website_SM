@@ -34,7 +34,7 @@ const servicesData = [
 const ServiceItem = ({ title, description, IconComponent }) => (
   <ListItem className="services__item">
     <ListItemIcon className="services__icon">
-      <IconComponent size="2em" color="#3f51b5" />
+      <IconComponent size="2em" color="rgb(0,0,51)" />
     </ListItemIcon>
     <Box>
       <Typography variant="h6" className="services__title">{title}</Typography>

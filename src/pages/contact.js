@@ -21,7 +21,7 @@ const Contact = () => {
       <Container maxWidth="md" sx={{ py: 6 }}>
         <Box textAlign="center" mb={4}>
           <Typography variant="h3" component="h1" gutterBottom>
-            Let’s Connect
+            Let's Connect
           </Typography>
           <Typography variant="body1">
             Whether you have a question or are interested in working with us, we're just a message away.
@@ -65,10 +65,24 @@ const Contact = () => {
             <Box textAlign="center" mt={4}>
               <Typography variant="h6">Follow Us:</Typography>
               <Box display="flex" justifyContent="center" gap={2} mt={1}>
-                <IconButton href="https://facebook.com" target="_blank" rel="noopener noreferrer" color="primary">
+                <IconButton 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "rgb(0,0,51)"
+                  }}
+                >
                   <FaFacebook />
                 </IconButton>
-                <IconButton href="https://twitter.com" target="_blank" rel="noopener noreferrer" color="primary">
+                <IconButton 
+                  href="https://twitter.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "rgb(0,0,51)"
+                  }}
+                >
                   <FaTwitter />
                 </IconButton>
               </Box>

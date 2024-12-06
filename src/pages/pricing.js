@@ -9,18 +9,17 @@ const ItemCard = ({ title, price, description, buttonText, onButtonClick }) => (
       <Typography variant="h5" component="h2" sx={{ fontWeight: 'bold', mb: 1 }}>
         {title}
       </Typography>
-      <Typography variant="h4" color="primary" sx={{ fontWeight: 'bold', mb: 2 }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'rgb(0,0,51)', mb: 2 }}>
         {price}
       </Typography>
-      <Typography variant="body2" color="textSecondary" sx={{ mb: 2 }}>
+      <Typography variant="body2" sx={{ mb: 2 }}>
         {description}
       </Typography>
       <Button 
-        variant="contained" 
-        color="primary" 
+        variant="contained"  
         fullWidth 
         onClick={onButtonClick}
-        sx={{ fontWeight: 'bold', mt: 2 }}
+        sx={{ fontWeight: 'bold', background: 'rgb(0,0,51)', mt: 2 }}
       >
         {buttonText}
       </Button>

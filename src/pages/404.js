@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 

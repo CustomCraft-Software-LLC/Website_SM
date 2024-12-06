@@ -25,6 +25,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   }
 };
 
+/*
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const productTemplate = require.resolve(`./src/templates/product.js`);
@@ -56,3 +57,4 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+*/

@@ -23,7 +23,7 @@ const NotFoundPage = () => (
         variant="contained" 
         color="primary" 
         component={Link} 
-        to="/" 
+        to="/Website_SM/" 
         sx={{ mt: 3 }}
       >
         Go to Homepage

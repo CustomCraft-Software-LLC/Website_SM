@@ -12,7 +12,7 @@ const Hero = () => (
         We provide top-notch services to our clients with a focus on quality and customer satisfaction.
       </Typography>
       <Button
-        href="/contact"
+        href="/Website_SM/contact"
         className="btn-primary"
       >
         Get in Touch

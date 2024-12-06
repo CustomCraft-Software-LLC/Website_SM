@@ -6,11 +6,11 @@ import { AppBar, Toolbar, Typography, IconButton, Drawer, List, ListItem, ListIt
 const NavLinks = ({ onLinkClick }) => (
   <List sx={{ display: "flex", gap: "16px", padding: 0, flexDirection: { xs: 'column', md: 'row' } }}>
     {[
-      { text: "Home", to: "/" },
-      { text: "About", to: "/about" },
-      { text: "Pricing", to: "/pricing" },
-      { text: "FAQ", to: "/faq" },
-      { text: "Contact", to: "/contact" }
+      { text: "Home", to: "/Website_SM" },
+      { text: "About", to: "/Website_SM/about" },
+      { text: "Pricing", to: "/Website_SM/pricing" },
+      { text: "FAQ", to: "/Website_SM/faq" },
+      { text: "Contact", to: "/Wesbite_SM/contact" }
     ].map(({ text, to }) => (
       <ListItem
         button

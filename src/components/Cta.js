@@ -12,7 +12,7 @@ const Cta = () => (
       <Button 
         variant="contained" 
         color="primary" 
-        href="/contact" 
+        href="/Website_SM/contact" 
         className="btn-primary"
         sx={{ marginTop: 2 }}
       >

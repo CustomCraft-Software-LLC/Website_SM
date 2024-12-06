@@ -61,7 +61,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" aria-label="FAQ" underline="none" sx={{ color: 'inherit', display: 'block' }}>
+                <Link href="/Website_SM/faq" aria-label="FAQ" underline="none" sx={{ color: 'inherit', display: 'block' }}>
                   FAQ
                 </Link>
               </li>
